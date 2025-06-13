@@ -1,0 +1,9 @@
+{
+  "id": 1,
+  "address": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+  "name": "Test User",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZGRyZXNzIjoiMHhmMzlGZDZlNTFhYWQ4OEY2RjRjZTZhQjg4MjcyNzljZmZGYjkyMjY2IiwiaWF0IjoxNjE2MjM5MDIyfQ.XRV6mLiZAEcLVB48_uU3MWI3lm-jJwrwMZzjK71RbT0",
+  "tokens": [1, 3, 5],
+  "profileImage": "/images/placeholders/profile.jpg",
+  "bio": "A test user for Cypress testing"
+} 

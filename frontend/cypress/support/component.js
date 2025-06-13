@@ -1,0 +1,43 @@
+// ***********************************************************
+// This example support/component.js is processed and
+// loaded automatically before your test files.
+//
+// This is a great place to put global configuration and
+// behavior that modifies Cypress.
+//
+// You can change the location of this file or turn off
+// automatically serving support files with the
+// 'supportFile' configuration option.
+//
+// You can read more here:
+// https://on.cypress.io/configuration
+// ***********************************************************
+
+// Import commands.js using ES2015 syntax:
+import './commands'
+
+// Alternatively you can use CommonJS syntax:
+// require('./commands')
+
+import { mount } from '@cypress/react'
+
+Cypress.Commands.add('mount', mount)
+
+// Add mock for localStorage
+beforeEach(() => {
+  let storage = {};
+  
+  cy.stub(window.localStorage, 'getItem').callsFake(key => storage[key]);
+  cy.stub(window.localStorage, 'setItem').callsFake((key, value) => {
+    storage[key] = value;
+  });
+  cy.stub(window.localStorage, 'removeItem').callsFake(key => {
+    delete storage[key];
+  });
+  cy.stub(window.localStorage, 'clear').callsFake(() => {
+    storage = {};
+  });
+});
+
+// Example use:
+// cy.mount(<MyComponent />) 

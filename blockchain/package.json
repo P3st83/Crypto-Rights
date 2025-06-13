@@ -1,0 +1,23 @@
+{
+  "name": "cryptorights-blockchain",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "node": "hardhat node",
+    "deploy:local": "hardhat run scripts/deploy.ts --network localhost",
+    "deploy:testnet": "hardhat run scripts/deploy.ts --network mumbai",
+    "deploy:mainnet": "hardhat run scripts/deploy.ts --network polygon"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.8.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox-viem": "^3.0.0",
+    "hardhat": "^2.22.19",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.1",
+    "dotenv": "^16.0.3"
+  }
+} 

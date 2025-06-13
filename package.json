@@ -1,0 +1,24 @@
+{
+  "name": "cryptorights",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend",
+    "blockchain"
+  ],
+  "scripts": {
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run server",
+    "dev:blockchain": "cd blockchain && npx hardhat node",
+    "deploy:contracts": "cd blockchain && npx hardhat run scripts/deploy.ts --network localhost",
+    "build:frontend": "cd frontend && npm run build",
+    "start:frontend": "cd frontend && npm run start",
+    "lint:frontend": "cd frontend && npm run lint",
+    "test:contracts": "cd blockchain && npx hardhat test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "A blockchain-powered content ownership and monetization platform"
+}
